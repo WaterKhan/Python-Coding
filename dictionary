@@ -1,0 +1,40 @@
+shop = {}
+print("""
+Shop Items Available
+====================
+1 : Add Item
+2 : Remove Item
+3 : View Item
+0 : Exit Program
+""")
+option = int(input("Enter an option: "))
+while option !=0:
+    if option == 1:
+        item = input("Enter an item: ")
+
+
+        if item in shop:
+            print("Item already in shop")
+            qty = int(input("Enter quantity of item: "))
+            shop[item] = shop[item] + qty
+        else:
+            qty = int(input("Enter quantity of item: "))
+            shop[item] = qty
+
+        for item in shop:
+            print(item,":",shop[item])
+
+    elif option == 2:
+            print("Enter an item: ")
+            del(shop[item])
+
+    elif option ==3:
+            for item in shop:
+                print(item,":",shop[item])
+    elif option !=0:
+            print("You did not enter a valid value")
+    option = int(input("\n\nEnter an option: "))
+
+else:
+
+    print("Shopping closed")
